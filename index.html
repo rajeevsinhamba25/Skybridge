@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyBridge Air Cargo | Air Cargo Logistics Service</title>
+  <meta name="description" content="SkyBridge Air Cargo: domestic air freight booking, shipment tracking and cargo operations dashboard.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <img src="images/logo.svg" alt="SkyBridge Air Cargo logo" width="40" height="40">
+        <span>SkyBridge Air Cargo</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#track">Track</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. HOME -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="tag">Air Cargo Logistics Service</p>
+        <h1>Your cargo, across India, overnight.</h1>
+        <p class="lead">SkyBridge Air Cargo moves time-critical freight between major Indian airports with end-to-end tracking, so businesses stop losing sales to late deliveries.</p>
+        <p class="purpose"><strong>Business purpose:</strong> Fast, reliable and fully visible air freight for e-commerce sellers, pharma distributors and manufacturers.</p>
+        <a href="#track" class="btn">Get Started</a>
+        <a href="#services" class="btn btn-outline">View Services</a>
+      </div>
+      <img src="images/hero.svg" alt="Cargo aircraft flying over a route map" class="hero-img">
+    </div>
+  </section>
+
+  <!-- 2. ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About the Business</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>What we do</h3>
+          <p>We book cargo space on freighter and passenger-belly flights, handle pickup, airport screening, loading and final delivery, and give customers a live status for every air waybill (AWB).</p>
+        </article>
+        <article class="card">
+          <h3>Target customers</h3>
+          <p>E-commerce sellers, pharma and medical suppliers, electronics importers, spare-parts distributors and any business with urgent, high-value freight.</p>
+        </article>
+        <article class="card">
+          <h3>Service area</h3>
+          <p>Delhi, Mumbai, Ahmedabad, Bengaluru, Hyderabad, Chennai and Kolkata, with pickup and delivery in the surrounding city zones.</p>
+        </article>
+        <article class="card">
+          <h3>Value proposition</h3>
+          <p>Next-day delivery on major routes, temperature-controlled options, transparent per-kg pricing and shipment tracking without needing to call anyone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SERVICES -->
+  <section id="services" class="section alt">
+    <div class="container">
+      <h2>Services and Pricing</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Service</th><th>Description</th><th>Transit</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Express Air Cargo</td><td>Priority next-day freight on major metro routes</td><td>24 hrs</td><td>₹95 / kg</td></tr>
+            <tr><td>Standard Air Freight</td><td>Economical air freight for non-urgent cargo</td><td>48 hrs</td><td>₹60 / kg</td></tr>
+            <tr><td>Cold Chain Air Cargo</td><td>Temperature-controlled (2-8°C) for pharma and perishables</td><td>24 hrs</td><td>₹150 / kg</td></tr>
+            <tr><td>Dangerous Goods Handling</td><td>Certified handling of regulated goods (batteries, chemicals)</td><td>48 hrs</td><td>₹180 / kg</td></tr>
+            <tr><td>Bulk Charter Booking</td><td>Dedicated cargo space for 1,000+ kg consignments</td><td>On request</td><td>Custom quote</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Need a quote for your lane? <a href="#contact">Send an enquiry</a> and we reply within one working day.</p>
+    </div>
+  </section>
+
+  <!-- BUSINESS FEATURE: TRACK SHIPMENT -->
+  <section id="track" class="section">
+    <div class="container narrow">
+      <h2>Track Your Shipment</h2>
+      <p>Enter your AWB number to see the current status. Try <code>AWB1001</code>, <code>AWB1002</code>, <code>AWB1003</code> or <code>AWB1004</code>.</p>
+      <form id="trackForm" class="inline-form">
+        <label for="awbInput" class="sr-only">AWB number</label>
+        <input type="text" id="awbInput" placeholder="e.g. AWB1001" autocomplete="off" required>
+        <button type="submit" class="btn">Track</button>
+      </form>
+      <div id="trackResult" class="result" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- 4. DASHBOARD -->
+  <section id="dashboard" class="section alt">
+    <div class="container">
+      <h2>Operations Dashboard</h2>
+      <p class="sub">What the cargo manager needs to know right now.</p>
+      <div class="kpis" id="kpis"></div>
+
+      <div class="chart-grid">
+        <div class="card">
+          <h3>Shipments per month</h3>
+          <div id="barChart" class="chart"></div>
+        </div>
+        <div class="card">
+          <h3>Shipment status mix</h3>
+          <div id="statusChart" class="chart"></div>
+        </div>
+      </div>
+      <p class="note">Need to see a specific consignment? <a href="#track">Go to shipment tracking</a>.</p>
+    </div>
+  </section>
+
+  <!-- 5. CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact and Enquiry</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Get in touch</h3>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:cargo@skybridgeair.example">cargo@skybridgeair.example</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+911234567890">+91 12345 67890</a></li>
+            <li><strong>Location:</strong> Cargo Complex, Airport Road, Ahmedabad, Gujarat
+              (<a href="https://www.google.com/maps/search/?api=1&amp;query=Sardar+Vallabhbhai+Patel+International+Airport+Cargo+Ahmedabad" target="_blank" rel="noopener">open in Google Maps</a>)</li>
+            <li><strong>Hours:</strong> Mon-Sat, 8:00 AM to 8:00 PM</li>
+          </ul>
+          <h3>Useful links</h3>
+          <ul class="contact-list">
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">Our LinkedIn page</a> for company updates and hiring</li>
+            <li><a href="https://www.aai.aero/" target="_blank" rel="noopener">Airports Authority of India</a> for airport and cargo terminal information</li>
+            <li><a href="https://www.bcasindia.gov.in/" target="_blank" rel="noopener">BCAS</a> for air cargo security regulations</li>
+          </ul>
+        </div>
+
+        <form id="enquiryForm" class="card form">
+          <h3>Send an enquiry</h3>
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+          <label for="route">Route (From - To)</label>
+          <input type="text" id="route" placeholder="Ahmedabad - Delhi" required>
+          <label for="weight">Approx. weight (kg)</label>
+          <input type="number" id="weight" min="1" required>
+          <label for="message">Message</label>
+          <textarea id="message" rows="3"></textarea>
+          <button type="submit" class="btn">Submit Enquiry</button>
+          <p id="formMsg" class="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 SkyBridge Air Cargo (fictional business created for a class exercise).</p>
+      <p>Built by <span id="studentName">Abhishek Tiwari</span> | <a href="#home">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

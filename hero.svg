@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" role="img" aria-label="Cargo aircraft flying over a route map">
+  <rect width="520" height="340" rx="16" fill="#12376a"/>
+  <g stroke="#2a5a9e" stroke-width="1">
+    <path d="M0 85H520M0 170H520M0 255H520M104 0V340M208 0V340M312 0V340M416 0V340" fill="none"/>
+  </g>
+  <path d="M70 270 Q200 90 330 170 T460 70" fill="none" stroke="#f28c28" stroke-width="3" stroke-dasharray="8 8"/>
+  <g fill="#ffffff">
+    <circle cx="70" cy="270" r="7"/>
+    <circle cx="330" cy="170" r="7"/>
+    <circle cx="460" cy="70" r="7"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#d6e4f5">
+    <text x="82" y="292">Ahmedabad</text>
+    <text x="300" y="196">Mumbai</text>
+    <text x="410" y="56">Delhi</text>
+  </g>
+  <g transform="translate(215 95) rotate(-18)">
+    <path d="M0 20 L90 20 Q112 20 112 30 Q112 40 90 40 L0 40 Z" fill="#ffffff"/>
+    <path d="M30 28 L60 -14 L74 -14 L56 28 Z" fill="#e8f1fb"/>
+    <path d="M30 32 L60 74 L74 74 L56 32 Z" fill="#e8f1fb"/>
+    <path d="M0 24 L-14 6 L-4 6 L12 24 Z" fill="#f28c28"/>
+  </g>
+</svg>
